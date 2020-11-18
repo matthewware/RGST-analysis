@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/308932118.svg)](https://zenodo.org/badge/latestdoi/308932118)
+
 # RGST-analysis environment
 
 Code for analyzing and plotting GST data from [arxiv:1803.01818](https://arxiv.org/abs/1803.01818).
