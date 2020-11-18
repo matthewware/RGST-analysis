@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/308932118.svg)](https://zenodo.org/badge/latestdoi/308932118)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4279920.svg)](https://doi.org/10.5281/zenodo.4279920)
 
 # RGST-analysis environment
 
@@ -25,7 +25,7 @@ Once the docker image is built the `start_env.sh`, `stop_env.sh`, and
 
 The code and scripts found here are provided as-is for the purposes of reproducing the results described in [arxiv:1803.01818](https://arxiv.org/abs/1803.01818).
 
-## Acknowledgets
+## Acknowledgements
 
 This work was funded by LPS/ARO grant W911NF-14-C-0048.  The content of this paper does not necessarily reflect the position or the policy of the Government,
 and no official endorsement should be inferred.
