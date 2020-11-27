@@ -46,7 +46,7 @@ and cite the arXiv version and the most recently published version of the manusc
 }
 ```
 
-## Authors
+## Contributors
 
-[Matthew Ware](https://matthewware.dev/) and
-[Marcus P. da Silva](https://marcusps.github.io/)
+Experiment generation scripts by [Marcus Silva](https://marcusps.github.io/). Data analysis by 
+[Matthew Ware](https://matthewware.dev/) and Marcus Silva.
