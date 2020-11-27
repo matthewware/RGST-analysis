@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4279920.svg)](https://doi.org/10.5281/zenodo.4279920)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4292751.svg)](https://doi.org/10.5281/zenodo.4292751)
 
 # RGST-analysis environment
 
