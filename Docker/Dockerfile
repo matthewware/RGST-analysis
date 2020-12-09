@@ -18,7 +18,9 @@ RUN tar xf julia-0.6.3-linux-x86_64.tar.gz
 RUN mv julia-d55cadc350/ julia-0.6.3/
 
 
-RUN /home/jovyan/julia-0.6.3/bin/julia -e 'Pkg.add("Convex.jl",v"0.5.0");Pkg.add("Formatting");Pkg.add("IJulia");Pkg.add("PyPlot");Pkg.add("QuantumInfo");Pkg.add("StatsBase");Pkg.add("NPZ");Pkg.add("Glob");Pkg.add("SchattenNorms");Pkg.add("Distributions");Pkg.add("Cliffords");'
+RUN /home/jovyan/julia-0.6.3/bin/julia -e 'Pkg.add("Convex.jl",v"0.5.0");Pkg.add("Formatting");Pkg.add("IJulia");Pkg.add("PyPlot");Pkg.add("StatsBase");Pkg.add("NPZ");Pkg.add("Glob");Pkg.add("SchattenNorms");Pkg.add("Distributions");Pkg.add("Cliffords");'
+
+RUN /home/jovyan/julia-0.6.3/bin/julia -e 'Pkg.clone("QuantumInfo");Pkg.checkout("QuantumInfo", "fix/0.6transforms");'
 
 RUN export LD_LIBRARY_PATH=/opt/conda/lib:$LD_LIBRARY_PATH
 RUN /home/jovyan/julia-0.6.3/bin/julia -e 'ENV["PYTHON"]="/opt/conda/bin/python";Pkg.build("PyCall");Pkg.build("PyPlot")'
