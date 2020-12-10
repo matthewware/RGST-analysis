@@ -206,5 +206,6 @@ dependencies:
   - pyqtchart==5.12
   - pyqtwebengine==5.12.1
   - ruamel-yaml==0.11.14
+  - julia
 prefix: /opt/conda
 
