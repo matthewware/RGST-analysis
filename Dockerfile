@@ -1,9 +1,6 @@
 FROM jupyter/scipy-notebook:c1b0cf6bf4d6
 MAINTAINER Matthew Ware "matt.ware@raytheon.com"
 
-RUN pip install --no-cache-dir notebook==5.*
-USER jovyan
-
 # for binder environment
 ARG NB_USER=jovyan
 ARG NB_UID=1000
@@ -21,6 +18,9 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
+
+RUN pip install --no-cache-dir notebook==5.*
+USER jovyan
 
 # PyCall needs this
 RUN conda install pyqt matplotlib
