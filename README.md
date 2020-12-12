@@ -19,7 +19,7 @@ Once the docker image is built the `start_env.sh`, `stop_env.sh`, and
 `copy_data.sh` utility scripts can be used to manage the environment.
 
 ### Binder
-The top-level Dockerfile is for the (binder.org)[https://mybinder.org/] build. This can be launched from the badge above. The binder build will also, most likely, take a long time. This could depend on how much is cached on the binder side. The limited resources on the binder.org side will also make the notebook a bit slow but it should work. The generation of the Hessian-based error bars for the diamond distance will be particularly slow.
+The top-level Dockerfile is for the [binder.org](https://mybinder.org/) build. This can be launched from the badge above. The binder build will also, most likely, take a long time. This could depend on how much is cached on the binder side. The limited resources on the binder.org side will also make the notebook a bit slow but it should work. The generation of the Hessian-based error bars for the diamond distance will be particularly slow.
 
 It is highly recommended that you not redo the `pygst` analysis on binder.org. This is the most time and resource intensive process and is already done for you with the results saved in `.npz` files. See the analysis notebook for more details.
 
