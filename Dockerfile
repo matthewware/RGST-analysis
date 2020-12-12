@@ -41,6 +41,7 @@ RUN /home/jovyan/julia-0.6.3/bin/julia -e 'ENV["PYTHON"]="/opt/conda/bin/python"
 # copy in the data
 COPY --chown=jovyan:users data/ work/data/
 COPY --chown=jovyan:users scripts/ work/scripts/
+COPY --chown=jovyan:users figs/ work/figs/
 COPY --chown=jovyan:users notebooks/ work/notebooks/
 COPY --chown=jovyan:users things-to-copy/ work/things-to-copy/
 
