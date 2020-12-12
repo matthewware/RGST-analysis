@@ -16,7 +16,7 @@ mv julia-d55cadc350/ julia-0.6.3/
 
 /home/jovyan/julia-0.6.3/bin/julia -e 'Pkg.clone("QuantumInfo");Pkg.checkout("QuantumInfo", "fix/0.6transforms");'
 
-export LD_LIBRARY_PATH=/opt/conda/lib:$LD_LIBRARY_PATH
-/home/jovyan/julia-0.6.3/bin/julia -e 'ENV["PYTHON"]="/opt/conda/bin/python";Pkg.build("PyCall");Pkg.build("PyPlot")'
+#export LD_LIBRARY_PATH=/opt/conda/lib:$LD_LIBRARY_PATH
+#/home/jovyan/julia-0.6.3/bin/julia -e 'ENV["PYTHON"]="/opt/conda/bin/python";Pkg.build("PyCall");Pkg.build("PyPlot")'
 
 /home/jovyan/julia-0.6.3/bin/julia -e 'Pkg.clone("QuantumInfo");Pkg.checkout("QuantumInfo", "fix/0.6transforms")'
