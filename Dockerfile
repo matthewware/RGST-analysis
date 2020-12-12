@@ -1,8 +1,26 @@
 FROM jupyter/scipy-notebook:c1b0cf6bf4d6
 MAINTAINER Matthew Ware "matt.ware@raytheon.com"
 
-#RUN /bin/bash -c "source activate python2"
+RUN pip install --no-cache-dir notebook==5.*
 USER jovyan
+
+# for binder environment
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
+
+# Make sure the contents of our repo are in ${HOME}
+COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
 
 # PyCall needs this
 RUN conda install pyqt matplotlib
