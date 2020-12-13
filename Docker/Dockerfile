@@ -31,5 +31,7 @@ COPY --chown=jovyan:users scripts/ work/scripts/
 COPY --chown=jovyan:users notebooks/ work/notebooks/
 COPY --chown=jovyan:users things-to-copy/ work/things-to-copy/
 
+RUN mkdir work/figs
+
 RUN chown -R jovyan work/
 RUN chmod -R 777 work/
