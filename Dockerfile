@@ -1,8 +1,21 @@
 FROM jupyter/scipy-notebook:c1b0cf6bf4d6
 MAINTAINER Matthew Ware "matt.ware@raytheon.com"
 
-#RUN /bin/bash -c "source activate python2"
+# for binder environment
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+
+# Make sure the contents of our repo are in ${HOME}
+USER root
+COPY . ${HOME}
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
+
 USER jovyan
+RUN pip install --no-cache-dir notebook==5.*
 
 # PyCall needs this
 RUN conda install pyqt matplotlib
@@ -31,8 +44,6 @@ COPY --chown=jovyan:users scripts/ work/scripts/
 COPY --chown=jovyan:users figs/ work/figs/
 COPY --chown=jovyan:users notebooks/ work/notebooks/
 COPY --chown=jovyan:users things-to-copy/ work/things-to-copy/
-
-RUN mkdir work/figs
 
 RUN chown -R jovyan work/
 RUN chmod -R 777 work/
