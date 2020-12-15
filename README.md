@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4292751.svg)](https://doi.org/10.5281/zenodo.4292751)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewware/RGST-analysis/binder)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewware/RGST-analysis/HEAD)
 
 # RGST-analysis environment
 
@@ -18,8 +18,8 @@ the `data/` directory were reconstructed using roughly 6 GB of RAM.
 Once the docker image is built the `start_env.sh`, `stop_env.sh`, and
 `copy_data.sh` utility scripts can be used to manage the environment.
 
-### Binder
-The top-level Dockerfile is for the [binder.org](https://mybinder.org/) build. This can be launched from the badge above. The binder build will take some time. The amount of time could depend on how much is cached on the binder.org side. The compute resources on the binder.org side are modest so we recommend you not try to do the `pygsti` reconstruction or the calculation of the Hessian-based error bars on binder.org. These two are particularly resource intensive. The results of these calculations are precomputed and the results saved in `.npz` files. See the analysis notebook for more details.
+### mybinder.org
+The top-level Dockerfile is for the [mybinder.org](https://mybinder.org/) build. This can be launched from the badge above. The mybinder build will take some time. The amount of time could depend on how much is cached on the mybinder.org side. The compute resources on the mybinder.org side are modest so we recommend you not try to do the `pyGSTi` reconstruction or the calculation of the Hessian-based error bars on mybinder.org. These two are particularly resource intensive. The results of these calculations are precomputed and the results saved in `.npz` files. See the analysis notebook for more details.
 
 
 ## Analysis notebooks
