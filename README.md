@@ -3,7 +3,7 @@
 
 # RGST-analysis environment
 
-Code for analyzing and plotting GST data from [arxiv:1803.01818](https://arxiv.org/abs/1803.01818).
+Code for analyzing and plotting GST data from [arxiv:1803.01818](https://arxiv.org/abs/1803.01818)
 
 ## Docker
 The `Docker/` folder contains a `Dockerfile` and instructions for building the analysis environment used in the tomographic reconstruction, analysis, and plotting of data in the `data/` folder. It is highly recommended that this image be used to run the analysis -- all the code was originally written in 2016-2017 and depends on rather outdated version of Python and Julia, as well as the assorted libraries used, and the image downloads all the appropriate versions. Building the image will take ~10 minutes depending on your machine and internet connection.
