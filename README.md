@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4323548.svg)](https://doi.org/10.5281/zenodo.4323548)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4609459.svg)](https://doi.org/10.5281/zenodo.4609459)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/matthewware/RGST-analysis/HEAD)
 
 # RGST-analysis environment
